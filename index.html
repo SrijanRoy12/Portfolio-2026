@@ -57,6 +57,7 @@
 }
 
 
+
 /* Animation styles */
 #typing-animation {
   position: relative;
@@ -590,14 +591,58 @@ This program provided practical exposure to real-world data analytics tasks with
 
 
 	<section class="ftco-section" id="publication-section">
+
   <style>
-    /* Make paragraph text change color on hover */
+    /* Card hover effect */
+    .blog-entry {
+      transition: all 0.35s ease;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .blog-entry:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+    }
+
+    /* Paragraph hover */
     .blog-entry .text p {
       transition: color 0.3s ease;
     }
     .blog-entry .text p:hover {
-      color: #00ff7f; /* Bright green */
+      color: #00ff7f;
       cursor: pointer;
+    }
+
+    /* Acceptance line styling */
+    .accept-line {
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .accept-blue {
+      color: #1E90FF;
+    }
+
+    .accept-green {
+      color: #00C851;
+    }
+
+    /* Conference logos */
+    .conf-logo {
+      height: 22px;
+      width: auto;
+      margin-left: 6px;
+      vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
+
+    .conf-logo:hover {
+      transform: scale(1.1);
     }
   </style>
 
@@ -609,20 +654,41 @@ This program provided practical exposure to real-world data analytics tasks with
         <p>Below are some of my selected research papers and technical publications at IEEE & Springer.</p>
       </div>
     </div>
-    
+
     <div class="row d-flex justify-content-center">
+
       <!-- First Publication -->
       <div class="col-md-4 d-flex ftco-animate">
         <div class="blog-entry justify-content-end">
-          <a href="https://drive.google.com/file/d/1u8dN77n2UhABZQrG5BGGJNs7G1cdlZE6/view?usp=sharing" class="block-20 zoom-effect" style="background-image: url('images/paper\ 1.png');">
+
+          <a href="https://drive.google.com/file/d/1u8dN77n2UhABZQrG5BGGJNs7G1cdlZE6/view?usp=sharing"
+             class="block-20 zoom-effect"
+             style="background-image: url('images/paper 1.png');">
           </a>
+
           <div class="text mt-3 float-right d-block">
             <h3 class="heading">
               <a href="https://drive.google.com/file/d/1u8dN77n2UhABZQrG5BGGJNs7G1cdlZE6/view?usp=sharing">
                 Domain Adaptive Named Entity Recognition for Indian Epics: Fine-Tuning BERT on the Ramayana Corpus
               </a>
             </h3>
-            <p>Proposes a domain-adaptive NER model leveraging BERT to extract entities from the Ramayana corpus, enhancing NLP understanding of ancient texts.</p>
+
+            <p>
+              Proposes a domain-adaptive NER model leveraging BERT to extract entities from the Ramayana corpus,
+              enhancing NLP understanding of ancient texts.
+            </p>
+
+            <div class="accept-line">
+              <span class="accept-blue">Accepted</span> –
+              <span class="accept-green">IEMENTech 2026</span>
+
+              <!-- Logos -->
+              <img src="images/iementech.png" alt="IEMENTech" class="conf-logo">       
+            </div>
+			<div style="font-size:0.85rem; color:#555; margin-top:2px;">
+              (IEEE)
+            </div>
+
           </div>
         </div>
       </div>
@@ -630,21 +696,45 @@ This program provided practical exposure to real-world data analytics tasks with
       <!-- Second Publication -->
       <div class="col-md-4 d-flex ftco-animate">
         <div class="blog-entry justify-content-end">
-          <a href="https://drive.google.com/file/d/1CFD_PdY2ALMOpCViL0Eh7cZoBCM7sCaP/view?usp=sharing" class="block-20 zoom-effect" style="background-image: url('images/paper\ 2.png');">
+
+          <a href="https://drive.google.com/file/d/1CFD_PdY2ALMOpCViL0Eh7cZoBCM7sCaP/view?usp=sharing"
+             class="block-20 zoom-effect"
+             style="background-image: url('images/paper 2.png');">
           </a>
+
           <div class="text mt-3 float-right d-block">
             <h3 class="heading">
               <a href="https://drive.google.com/file/d/1CFD_PdY2ALMOpCViL0Eh7cZoBCM7sCaP/view?usp=sharing">
                 Enhancing Credit Card Approval Prediction with Explainable AI: A SHAP-Driven Decision Tree Approach
               </a>
             </h3>
-            <p>Presents a decision tree model for credit card approval enhanced with SHAP explainability, providing transparent, interpretable AI predictions for financial decisions.</p>
+
+            <p>
+              Presents a decision tree model for credit card approval enhanced with SHAP explainability,
+              providing transparent, interpretable AI predictions for financial decisions.
+            </p>
+
+            <div class="accept-line">
+              <span class="accept-blue">Accepted</span> –
+              <span class="accept-green">IEMENTech 2026</span>
+
+              <!-- Logos -->
+              <img src="images/spectrum.jpg" alt="Spectrum" class="conf-logo">
+            </div>
+
+			<div style="font-size:0.85rem; color:#555; margin-top:2px;">
+              (SPRINGER)
+            </div>
+
+
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
 
 
 
