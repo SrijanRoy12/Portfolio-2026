@@ -111,6 +111,51 @@
 }
 
 
+/* Tech stack badges */
+.tech-mf .tech-list { margin-top: .5rem; }
+.tech-mf .tech-badge { background-color: #ffbd39; color: #000; margin: 3px 4px; padding: 6px 10px; border-radius: 4px; font-weight: 700; display: inline-block; }
+
+/* Technical Skills card styles */
+.tech-mf .skill-cards { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.tech-mf .skill-card { background: linear-gradient(180deg, #ffffff, #fffaf0); border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); padding: 16px; min-width: 220px; flex: 1 1 220px; }
+.tech-mf .skill-card h4 { margin: 0 0 8px; font-size: 1rem; color: #222; font-weight: 800; }
+.tech-mf .skill-card p { margin: 0; color: #444; line-height: 1.45; }
+.tech-mf .title-s { margin-bottom: 6px; }
+
+/* Hero subtitle (small, single-line, Bahnschrift-like) */
+.hero .text h3 {
+  font-family: "Bahnschrift SemiLight SemiConde", "Bahnschrift", "Segoe UI", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 6px;
+}
+
+/* Achievements section styles */
+#achievements-section .heading { color: #1e293b; }
+#achievements-section .heading h1.big-2 { color: #111827; }
+#achievements-section .blog-entry { width: 100%; }
+#achievements-section .blog-entry .text {
+  padding: 18px 20px;
+  background: linear-gradient(180deg, #9acf9e 0%, #9acf9e 100%);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+  width: 100%;
+}
+#achievements-section .heading .mb-4 { color: #374151; }
+#achievements-section .text .heading { color: #ff6b00; font-weight: 800; margin-bottom: 10px; }
+#achievements-section ul { list-style: none; padding-left: 0; margin: 0; }
+#achievements-section li { position: relative; padding-left: 34px; margin-bottom: 10px; color: #334155; }
+#achievements-section li:before { content: ""; position: absolute; left: 0; top: 6px; width: 18px; height: 18px; background: linear-gradient(180deg,#ffbd39,#ff8c00); border-radius: 4px; box-shadow: 0 4px 10px rgba(255,139,0,0.18); }
+
+/* Responsive tweaks */
+@media (max-width: 767px) {
+  #achievements-section .skill-cards, #achievements-section .row.d-flex { flex-direction: column; }
+  #achievements-section .blog-entry { margin-bottom: 14px; }
+}
+
 </style>
 
 
@@ -131,6 +176,7 @@
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="#publication-section" class="nav-link"><span>Publications</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
@@ -190,6 +236,7 @@
 						<br>
 						<br>
 			            <h2>A B.Tech CSE 4th Year student</h2>
+						<h3>AI Engineer • Data Scientist • Full-Stack Builder • Software Developer</h3>
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
 						<!-- <br> -->
 			            <!-- Buttons in Hero Section -->
@@ -305,7 +352,29 @@
 										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
-								</div>
+                </div>
+                <!-- Technical Skills (designer layout) -->
+                <div class="tech-mf mt-3">
+                  <p class="title-s">Technical Skills</p>
+                  <div class="skill-cards">
+                    <div class="skill-card">
+                      <h4>Languages</h4>
+                      <p>Python, Java, JavaScript, SQL, HTML/CSS</p>
+                    </div>
+                    <div class="skill-card">
+                      <h4>Frameworks &amp; Libraries</h4>
+                      <p>React.js, TensorFlow, PyTorch, HuggingFace, Streamlit, NumPy, Pandas</p>
+                    </div>
+                    <div class="skill-card">
+                      <h4>Developer Tools &amp; Platforms</h4>
+                      <p>VS Code, Jupyter Notebook, Google Cloud Platform, Oracle Live SQL, Git, Linux, Kali Linux</p>
+                    </div>
+                    <div class="skill-card">
+                      <h4>Technologies</h4>
+                      <p>Machine Learning, NLP, LLMs, RAG, ETL Pipelines, REST APIs, Data Processing</p>
+                    </div>
+                  </div>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -338,9 +407,9 @@
         <h2 class="mb-4">About Me</h2>
         
         <p>
-          Myself Srijan Roy, a B.Tech 3rd year student currently pursuing Computer Science Engineering in IEM, Kolkata. I have over 6 months of comprehensive experience in the field of Backend Web Development. 
-          Proficient in data analysis, artificial intelligence, frontend development, database management & machine learning. 
-          Demonstrated success in leading impactful projects.
+          I’m Srijan Roy, a Computer Science undergraduate specializing in AI, Machine Learning, and Data Engineering. 
+          I build intelligent systems, automation pipelines, and modern web applications that solve real-world problems. 
+          My work spans NLP research, full-stack development, and scalable data workflows.
         </p>
       </div>
     </div>
@@ -738,6 +807,54 @@ This program provided practical exposure to real-world data analytics tasks with
 
 
 
+
+
+    <section class="ftco-section" id="achievements-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Achievements</h1>
+            <h2 class="mb-4">Achievements &amp; Extracurricular Activities</h2>
+            <p>Selected hackathons, leadership roles, certifications and trainings.</p>
+          </div>
+        </div>
+
+        <div class="row d-flex">
+          <div class="col-md-6 d-flex ftco-animate">
+            <div class="blog-entry">
+              <div class="text mt-3 d-block">
+                <h3 class="heading">Hackathons &amp; Leadership</h3>
+                <ul>
+                  <li>Junior Research Assistant at IEDC Lab (IEM) contributing to AI/ML research</li>
+                  <li>Industry Community of IEM GenAI COE</li>
+                  <li>Team Leader for AI for Bharat Hackathon (AWS &amp; Hack2Skill)</li>
+                  <li>Round-2 qualifier in Tata Imagination Challenge 2025</li>
+                  <li>Finalist/Participant in Gen AI Exchange, TCS CodeVita, and Smart India Hackathon 2025</li>
+                  <li>Active member of Google Developer Group on campus, IEM and Coding Club India</li>
+                  <li>Submitted AI innovation proposals to GDG Solution Challenge, EY Techathon 6.0, and D3CODE 2025</li>
+                  <li>Completed job simulations with TCS, Deloitte, Accenture, BCG X, and British Airways</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 d-flex ftco-animate">
+            <div class="blog-entry">
+              <div class="text mt-3 d-block">
+                <h3 class="heading">Certifications &amp; Training</h3>
+                <ul>
+                  <li>Agentic AI Training (ServiceNow University)</li>
+                  <li>Responsible AI &amp; ML course (IIT Roorkee)</li>
+                  <li>Participation certificate of Yuva AI for ALL, Govt. of India</li>
+                  <li>Certified in Python &amp; Machine Learning from NIELIT, Govt. of India</li>
+                  <li>Completed AI/ML, DL, DS masterclass from SCALAR</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
   <div class="container">
