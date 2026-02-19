@@ -98,6 +98,50 @@
   }
 }
 
+/* Welcome Popup Styles */
+.welcome-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  animation: popupSlideIn 0.4s ease-out;
+}
+
+.welcome-popup.hidden {
+  animation: popupSlideOut 0.4s ease-out forwards;
+}
+
+@keyframes popupSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes popupSlideOut {
+  from {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+
 
 /* project image zoom effect */
 
@@ -1011,6 +1055,9 @@ This program provided practical exposure to real-world data analytics tasks with
 	  </footer>
 
 
+  <!-- Welcome Popup -->
+  <div class="welcome-popup" id="welcomePopup">Welcome to Roy's World</div>
+
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
@@ -1029,6 +1076,26 @@ This program provided practical exposure to real-world data analytics tasks with
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+  
+  <!-- Welcome Popup Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const welcomePopup = document.getElementById('welcomePopup');
+      
+      // Show popup when page loads
+      setTimeout(function() {
+        welcomePopup.style.display = 'block';
+      }, 500);
+      
+      // Hide popup after 2 seconds
+      setTimeout(function() {
+        welcomePopup.classList.add('hidden');
+        setTimeout(function() {
+          welcomePopup.style.display = 'none';
+        }, 500); // Wait for animation to complete
+      }, 2000);
+    });
+  </script>
     
   </body>
 </html>
